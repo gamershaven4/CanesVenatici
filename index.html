@@ -107,15 +107,43 @@ In 1967, the first pulsar, PSR B1919+21, was discovered in Vulpecula by Jocelyn 
 </div>
   </div>
 
-<div id="star2.png">
-    <div class="hoverPoint" style="top:312px;left:178px;" data-content="This is a <u>test</u> (A)"></div>
-    <div class="hoverPoint" style="top:37px;left:379px;" data-content="This is a <b>test</b> (C)"></div>
-    <div id="tooltip"></div>    
-</div>
 
 <div class="gallery">
-  <a target="_blank" href="">
-    <img src="" alt="" width="600" height="400">
+    <div>
+    <img src="star2.png" alt="" />
+    <span data-title="This is a custom title"></span>
+</div>
+  div {
+    width: 200px;
+    position: relative;
+}
+
+div img {
+    max-width: 100%;
+}
+
+div span {
+    height: 20px;
+    width: 20px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    bottom: 25px;
+    z-index: 1;
+}
+
+span:hover:after {
+    content: attr(data-title);
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    font-size: 13px;
+    font-family: Arial;
+    width: 200px;
+    top: 15px;
+    padding: 10px;
+    position: absolute;
+}
   </a>
   <div class="desc"></div>
 </div>
